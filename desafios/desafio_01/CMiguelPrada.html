@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 01</title>
+</head>
+<body>
+    <h1>ABRE LA CONSOLA, DESAFIO CLASE</h1>
+    <script>
+        class User {
+            constructor(name, lastname, libro, pet) {
+                this.name = name;
+                this.lastname = lastname;
+                this.libro = libro;
+                this.mascota = pet;
+            }
+            getFullName() {
+                return `Te llamas ${this.name} ${this.lastname}`;
+            }
+            addMascota(pet) {
+                this.mascota = [...this.mascota, pet];
+            }
+            getMascotas() {
+                return `Tienes ${this.mascota.length} mascota(s)`;
+            }
+            addLibro(author, libro) {
+                this.libro.push({ author: author, libro: libro})
+            }
+            getLibro() {
+                const bookTitles = this.libro.map(title => title.libro);
+                return bookTitles;
+            }
+        }
+
+        const mascotas = ['Math Akita', 'Yeiko Husky']
+        
+        const libros = [
+            {
+                author: "Alessanfra Salvaggio",
+                libro: "Javascript"
+            },
+            {
+                author: "Guillermo Pantaleo",
+                libro: "Ingenieria de Software"
+            }
+        ]
+        const user = new User('Miguel', 'Prada', libros, mascotas)
+
+        console.log(user);
+
+        console.log(user.getFullName());
+        user.addMascota('Leo el miniatura');
+        console.log(user.getMascotas());
+        user.addLibro('Carrillo', 'Muros con fibras de acero');
+        console.log(user.getLibro()); 
+    </script>
+</body>
+</html>
