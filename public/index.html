@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="options">
+        <div class="option">
+            <div class="option-title">
+                <p>VER PRODUCTOS</p>
+            </div>
+            <div class="option-button">
+                <form action="/api/productos" method="get">
+                    <input type="submit" value="+" />
+                </form>
+            </div>
+        </div>
+
+        <div class="option">
+            <div class="option-title">
+                <p>CREAR PRODUCTO</p>
+            </div>
+            <div class="option-button">
+                <form action="/api/producto" method="post" enctype="application/x-www-form-urlencoded">
+                    Title: <input type="text" name="title" id=""> 
+                    Price: <input type="text" name="price" id="">
+                    Thumbnail: <input type="text" name="thumbnail" id="">
+                    <input type="submit" value="+" />
+                </form>
+            </div>
+        </div>
+
+        <div class="option">
+            <div class="option-title">
+                <p>ELIMINAR PRODUCTO</p>
+            </div>
+            <div class="option-button">
+                <form action="/api/productoeliminar" method="post">
+                    id: <input type="text" name="id" id="">
+                    <input type="submit" value="-" />
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
