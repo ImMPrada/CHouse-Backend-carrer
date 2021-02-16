@@ -11,25 +11,41 @@
     <div class="options">
         <div class="option">
             <div class="option-title">
-                <p>VER PRODUCTOS</p>
+                <p>CREAR PRODUCTO</p>
             </div>
-            <div class="option-button">
-                <form action="/api/productos" method="get">
-                    <input type="submit" value="+" />
+            <div class="option-form">
+                <form action="/api/producto" method="POST" enctype="application/x-www-form-urlencoded">
+                    Title: <br> <input type="text" name="title" id=""> <br>
+                    Price: <br> <input type="text" name="price" id=""> <br>
+                    Thumbnail: <br> <input type="text" name="thumbnail" id=""> <br>
+                    <input class="option-form-button" type="submit" value="Click!" />
                 </form>
             </div>
         </div>
 
         <div class="option">
             <div class="option-title">
-                <p>CREAR PRODUCTO</p>
+                <p>VER PRODUCTO</p>
             </div>
-            <div class="option-button">
-                <form action="/api/producto" method="post" enctype="application/x-www-form-urlencoded">
-                    Title: <input type="text" name="title" id=""> 
-                    Price: <input type="text" name="price" id="">
-                    Thumbnail: <input type="text" name="thumbnail" id="">
-                    <input type="submit" value="+" />
+            <div class="option-form">
+                <form action="/api/productos/" method="GET">
+                    id: <br> <input type="text" name="id" id=""> <br>
+                    <input class="option-form-button" type="submit" value="Click!" />
+                </form>
+            </div>
+        </div>
+
+        <div class="option">
+            <div class="option-title">
+                <p>MODIFICAR PRODUCTO</p>
+            </div>
+            <div class="option-form">
+                <form action="/api/producto?_method=PUT" method="POST" enctype="application/x-www-form-urlencoded">
+                    Title: <br> <input type="text" name="title" id=""> <br>
+                    Price: <br> <input type="text" name="price" id=""> <br>
+                    Thumbnail: <br> <input type="text" name="thumbnail" id=""> <br>
+                    id: <br> <input type="text" name="id" id=""> <br>
+                    <input class="option-form-button" type="submit" value="Click!" />
                 </form>
             </div>
         </div>
@@ -38,10 +54,10 @@
             <div class="option-title">
                 <p>ELIMINAR PRODUCTO</p>
             </div>
-            <div class="option-button">
-                <form action="/api/productoeliminar" method="post">
-                    id: <input type="text" name="id" id="">
-                    <input type="submit" value="-" />
+            <div class="option-form">
+                <form action="/api/producto?_method=DELETE" method="POST">
+                    id: <br> <input type="text" name="id" id=""> <br>
+                    <input class="option-form-button" type="submit" value="Click!" />
                 </form>
             </div>
         </div>

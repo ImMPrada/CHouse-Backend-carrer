@@ -16,7 +16,7 @@ app.use('/api',require('./routes/api'));
 app.use('/api/html',express.static('public'));
 
 const server=app.listen(8080, function(){
-    console.log(server.address().port)
+    console.log(colors.yellow.bold(`SERVIDOR INICIADO EN PUERTO: ${server.address().port}`))
 });
 
 
