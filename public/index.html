@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="options">
+        <div class="option">
+            <div class="option-title">
+                <p>CREAR PRODUCTO</p>
+            </div>
+            <div class="option-form">
+                <form action="/api/producto" method="POST" enctype="application/x-www-form-urlencoded">
+                    Title: <br> <input type="text" name="title" id=""> <br>
+                    Price: <br> <input type="text" name="price" id=""> <br>
+                    Thumbnail: <br> <input type="text" name="thumbnail" id=""> <br>
+                    <input class="option-form-button" type="submit" value="Click!" />
+                </form>
+            </div>
+        </div>
+
+        <div class="option">
+            <div class="option-title">
+                <p>VER PRODUCTO</p>
+            </div>
+            <div class="option-form">
+                <form action="/api/productos/" method="GET">
+                    id: <br> <input type="text" name="id" id=""> <br>
+                    <input class="option-form-button" type="submit" value="Click!" />
+                </form>
+            </div>
+        </div>
+
+        <div class="option">
+            <div class="option-title">
+                <p>MODIFICAR PRODUCTO</p>
+            </div>
+            <div class="option-form">
+                <form action="/api/producto?_method=PUT" method="POST" enctype="application/x-www-form-urlencoded">
+                    Title: <br> <input type="text" name="title" id=""> <br>
+                    Price: <br> <input type="text" name="price" id=""> <br>
+                    Thumbnail: <br> <input type="text" name="thumbnail" id=""> <br>
+                    id: <br> <input type="text" name="id" id=""> <br>
+                    <input class="option-form-button" type="submit" value="Click!" />
+                </form>
+            </div>
+        </div>
+
+        <div class="option">
+            <div class="option-title">
+                <p>ELIMINAR PRODUCTO</p>
+            </div>
+            <div class="option-form">
+                <form action="/api/producto?_method=DELETE" method="POST">
+                    id: <br> <input type="text" name="id" id=""> <br>
+                    <input class="option-form-button" type="submit" value="Click!" />
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

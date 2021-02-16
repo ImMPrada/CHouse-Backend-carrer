@@ -1,0 +1,1 @@
+{"productos":[{"title":"2","price":"2","thumbnail":"2","id":2},{"title":"Toto nerd","price":"68900000","thumbnail":"","id":5},{"title":"tato","price":"50000","thumbnail":"odfosdof","id":6},{"title":"Mary Prada Ordoñez","price":"Mucha comida","thumbnail":"Cualquier cosita","id":7},{"title":"tato","price":"50000","thumbnail":"odfosdof","id":8}]}
