@@ -4,7 +4,90 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #main {
+            height: 100vh;
+            background-color: wheat;
+            color: rgb(87, 63, 63);
+        }
+        #main-no {
+            min-height: 100vh;
+            background-color: wheat;
+            color: rgb(87, 63, 63);
+        }
+        .content {
+            width: 350px;
+
+            margin: auto;
+        }
+        .title {
+            padding-top: 50px;
+            margin-bottom: 30px;
+            font-size: 24px;
+            text-align: center;
+        }
+        .form {
+            width: 300px;
+            margin: auto;
+        }
+        form input {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+        .product {
+            display: grid;
+            grid-template-columns: 50% 50%;
+
+            text-align: center;
+        }
+        .col-2 {
+            grid-column: 1/span 2;
+        }
+        .product-data-img {
+            width: 100%;
+        }
+        img {
+            width: 100%;
+        }
+        .form-buttons *{
+            padding: 0;
+            margin: 0;
+            whidth: 100%;
+            padding-top:5px;
+            height: 25px;
+        }
+        .productos-lista .productos-lista-item {
+            display: grid;
+            grid-template-columns: auto 200px;
+            grid-template-rows: 150px;
+
+            margin-top: 10px;
+            border-radius: 10px;
+            border: .5px solid grey;
+            padding-left: 5px;
+            background-color: rgb(255, 249, 221);
+        }
+        .productos-lista .productos-lista-item-text {
+            align-self: center;
+        }
+        .productos-lista .productos-lista-item-img img{
+            border-radius: 10px;
+            height: 150px;
+        }
+        .productos-lista-vacia p{
+            padding-top: 30px;
+            font-size: 24px;
+            color:rgb(170, 0, 0);
+            font-weight: 800;
+            text-align: center;
+        }
+
+    </style>
     <title>Document</title>
 </head>
     {{{body}}}

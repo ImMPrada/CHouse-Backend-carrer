@@ -1,19 +1,41 @@
-<h1>Productos</h1>
+<div id="main-no">
+    <div class="content">
+        <div class="title">
+            <h1>Productos</h1>
+        </div>
+        <div class="productos">
+            <div class="productos-lista">
+                {{#if listExists}}
+                    {{#each products}}
+                        <div class="productos-lista-item">
+                            <div class="productos-lista-item-text">
+                                <p>{{this.title}}</p>
+                                <p>{{this.price}}</p>
+                            </div>
+                            <div class="productos-lista-item-img">
+                                <img src={{this.thumbnail}} alt="">
+                            </div>
+                        </div>
+                    {{/each}}
+                {{else}}
+                    <div class="productos-lista-vacia">
+                        <p>{{message}}</p>
+                    </div>
+                {{/if}}
+            </div>
+            <div class="productos-boton">
+                <form action="/productos/vista" method="GET" enctype="application/x-www-form-urlencoded">
+                    <input class="option-form-button" type="submit" value="Ir a agregar productos" />
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
-{{#if listExists}}
-    {{#each products}}
-        <p>{{this.title}}</p>
-        <p>{{this.price}}</p>
-        <img src={{this.thumbnail}} alt="">
-    {{/each}}
-{{else}}
-    <p>{{message}}</p>
-{{/if}}
 
 
 
-<form action="/productos/vista" method="GET" enctype="application/x-www-form-urlencoded">
-    <input class="option-form-button" type="submit" value="Ir a agregar productos" />
-</form>
+
+
 
 
