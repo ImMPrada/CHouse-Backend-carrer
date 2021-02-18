@@ -1,0 +1,19 @@
+<h1>Producto agregado</h1>
+
+<form action="productos/vista" method="POST" enctype="application/x-www-form-urlencoded">
+    <h3>Titulo</h3>
+    <h4>{{title}}</h4>
+    <h3>Precio</h3>
+    <h4>{{price}}</h4>
+    <h3>Miniatura</h3>
+    <img src={{thumbnail}} alt="" >
+</form>
+
+<form action="/productos/vista" method="GET" enctype="application/x-www-form-urlencoded">
+    <input class="option-form-button" type="submit" value="Regresar" />
+</form>
+
+<form action="/productos/vista/all" method="GET" enctype="application/x-www-form-urlencoded">
+    <input class="option-form-button" type="submit" value="Ver todos" />
+</form>
+

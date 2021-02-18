@@ -2,13 +2,15 @@ const colors = require('colors');
 const { json } = require('express');
 
 var express =require('express');
-var methodOverride = require('method-override')
+var methodOverride = require('method-override');
 const Archivo = require('../productos/desafio');
+
 var router=express.Router();
 
 let archivo = Object;
 let datos;
 
+router.use(express.urlencoded({extended:true}))
 router.use(methodOverride('_method'));
 
 router.use('/', function(req,res,next){
@@ -17,6 +19,7 @@ router.use('/', function(req,res,next){
     datos=archivo.leer()
     next()
 });
+
 
 /* 
 PERMITE OBTENER LA LISTA DE PRODUCTOS, COMO UN ARRAY SI EL id VIENE VACÍO.
