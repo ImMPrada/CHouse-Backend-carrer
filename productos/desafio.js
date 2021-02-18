@@ -15,6 +15,7 @@ class Archivo {
 
     async leer(id){
         console.group(colors.red.bold('(desde el objeto) LEYENDO...'))
+        console.group(colors.red.bold(`id: ${id}`))
         console.groupEnd()
 
         try {
@@ -48,7 +49,7 @@ class Archivo {
     };
 
     async agregar(title,price,thumb) {
-        console.group(colors.red.bold('(desde el objeto) AGREGANDO...'))
+        console.log(colors.red.bold('(desde el objeto) AGREGANDO...'))
         console.log(colors.red(this.contenido.productos.length))
 
         this.contenido.productos.length==0
@@ -80,7 +81,6 @@ class Archivo {
             console.groupEnd()
             return JSON.parse('{"error":"Se ha presentado un error"}')
         }
-        console.groupEnd()
     };
 
     async modificar(title,price,thumb, id ) {
